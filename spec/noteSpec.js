@@ -7,7 +7,13 @@
     } else {
       console.log('Note checker verified');
     }
-  };
+    if (note.returnNote() !== note.body) {
+      throw new Error("returnNote does not match");
+    } else {
+        console.log('returnNote verified');
+      }
+    }
+  
 
   noteChecker();
 })(this);

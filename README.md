@@ -8,13 +8,13 @@ We took an object oriented design and development approach to this
 project and using modular design patterns. We worked as an agile team
 in a 5 day sprint to design and develop all aspects of this project.
 
-##Collaborators
+## Collaborators
 
 - Mengchen Wang
 - Zoe Hopkins
 - Rory Hodgson
 - James Stubbs
 
-##Technologies used
+## Technologies used
 
 - Pure Javascript

@@ -1,4 +1,3 @@
-
 createNote();
 
 noteBuddy = new NoteBuddy();
@@ -16,7 +15,5 @@ function createNote() {
 
 function displayNoteList() {
   noteBuddyView = new NoteBuddyView(noteBuddy);
-  document
-    .getElementById("note_list")
-    .innerHTML =  noteBuddyView.toHTML(); // function in noteBuddy - create HTML format
+  document.getElementById("note_list").innerHTML = noteBuddyView.toHTML();
 }

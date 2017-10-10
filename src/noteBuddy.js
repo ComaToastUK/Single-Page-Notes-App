@@ -17,6 +17,5 @@
     return this.list;
   };
 
-
   exports.NoteBuddy = NoteBuddy;
 })(this);

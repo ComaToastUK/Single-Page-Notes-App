@@ -10,7 +10,11 @@
   NoteBuddy.prototype.createNote = function(string) {
     var note = new Note(string);
     this.storeNote(note);
-    return note
+    return note;
+  };
+
+  NoteBuddy.prototype.outputList = function() {
+    return this.list;
   };
 
   exports.NoteBuddy = NoteBuddy;

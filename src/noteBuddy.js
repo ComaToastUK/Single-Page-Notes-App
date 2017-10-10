@@ -13,5 +13,6 @@
     return note
   };
 
+
   exports.NoteBuddy = NoteBuddy;
 })(this);

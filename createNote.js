@@ -1,23 +1,22 @@
 
-  console.log("anyone there?")
 createNote();
-noteBuddy = new NoteBuddy
+
+noteBuddy = new NoteBuddy();
 
 function createNote() {
   document
     .getElementById("create_note")
     .addEventListener("click", function(clickEvent) {
       clickEvent.preventDefault();
-      var text = document.getElementById("note");
+      var text = document.getElementById("note").value;
       var exampleNote = noteBuddy.createNote(text);
-      console.log(exampleNote)
-      console.log("Hello")
       displayNoteList();
     });
-};
+}
 
 function displayNoteList() {
+  noteBuddyView = new NoteBuddyView(noteBuddy);
   document
     .getElementById("note_list")
-    .innerHTML =  noteBuddy.returnNotesArray(); // function in noteBuddy - create HTML format
-};
+    .innerHTML =  noteBuddyView.toHTML(); // function in noteBuddy - create HTML format
+}

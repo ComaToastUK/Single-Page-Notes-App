@@ -1,11 +1,17 @@
+
+  console.log("anyone there?")
 createNote();
+noteBuddy = new NoteBuddy
 
 function createNote() {
   document
     .getElementById("create_note")
     .addEventListener("click", function(clickEvent) {
       clickEvent.preventDefault();
-      // function in noteBuddy - create and add note to array
+      var text = document.getElementById("note");
+      var exampleNote = noteBuddy.createNote(text);
+      console.log(exampleNote)
+      console.log("Hello")
       displayNoteList();
     });
 };
@@ -13,5 +19,5 @@ function createNote() {
 function displayNoteList() {
   document
     .getElementById("note_list")
-    .innerHTML =  ; // function in noteBuddy - create HTML format
+    .innerHTML =  noteBuddy.returnNotesArray(); // function in noteBuddy - create HTML format
 };

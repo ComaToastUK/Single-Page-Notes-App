@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <style>
   h1 {
       text-align:center;
@@ -43,26 +43,32 @@
     border: 2px solid #4CAF50;
   }
 </style>
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Note Buddy</title>
-    <script>src="createNote.js"</script>
-    <script>src="src/note.js"</script>
-    <script>src="src/noteBuddy.js"</script>
+
   </head>
 
   <body>
 
   <h1>Note Buddy</h1>
 
-  <form action="" method="POST" enctype="multipart/form-data">
+  <form id="noteForm" action="/" method="GET" enctype="multipart/form-data" >
     <textarea id ="note" name="note"></textarea>
     <input id="create_note" class="button" type="submit" value="Create">
   </form>
 
   <div id="note_list"></div>
+
+
+  <script src="src/note.js"></script>
+  <script src="src/noteBuddy.js"></script>
+  <script src="createNote.js"></script>
+
+
+
 
   </body>
 </html>

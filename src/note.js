@@ -6,6 +6,6 @@
   Note.prototype.returnNote = function () {
     return this.body;
   };
-  
+
 exports.Note = Note;
 })(this);

@@ -7,8 +7,8 @@
     return this.list.push(note);
   };
 
-  NoteBuddy.prototype.createNote = function(string) {
-    var note = new Note(string);
+  NoteBuddy.prototype.createNote = function(string, noteConstructor = Note) {
+    var note = new noteConstructor(string);
     this.storeNote(note);
     return note;
   };

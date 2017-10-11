@@ -12,7 +12,20 @@
     } else {
       for (var i = 0; i < noteCount; i++) {
         var note = notes[i];
-        this.htmlArray.push("<li><div>" + note.returnNote().substring(0, 20) + "</div></li>");
+        var noteLink = note
+          .returnNote()
+          .substring(0, 20)
+          .split(" ")
+          .join("-");
+        this.htmlArray.push(
+          "<div id=" +
+            "'noteLink'" +
+            "><a href='#" +
+            noteLink +
+            "'>" +
+            note.returnNote().substring(0, 20) +
+            "</a></div>"
+        );
       }
     }
     this.htmlArray.push("</ul>");

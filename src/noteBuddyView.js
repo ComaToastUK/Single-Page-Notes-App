@@ -17,20 +17,27 @@
           .substring(0, 20)
           .split(" ")
           .join("-") + "$" + i;
-        this.htmlArray.push(
-          "<div id=" +
-            "'noteLink'" +
-            "><a href='#" +
-            noteLink +
-            "'>" +
-            note.returnNote().substring(0, 20) +
-            "</a></div>"
-        );
+        this.noteLinkFormatter(note, noteLink)
       }
     }
     this.htmlArray.push("</ul>");
     return this.htmlArray.join("");
   };
+
+
+NoteBuddyView.prototype.noteLinkFormatter = function(note, noteLink) {
+  this.htmlArray.push(
+    "<div id=" +
+      "'noteLink'" +
+      "><a href='#" +
+      noteLink +
+      "'>" +
+      note.returnNote().substring(0, 20) +
+      "</a></div>"
+  );
+};
+
+
 
   exports.NoteBuddyView = NoteBuddyView;
 })(this);

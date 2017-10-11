@@ -25,17 +25,18 @@
   };
 
 
-  NoteBuddyView.prototype.noteLinkFormatter = function (note, noteLink){
-    this.htmlArray.push(
-      "<div id=" +
-        "'noteLink'" +
-        "><a href='#" +
-        noteLink +
-        "'>" +
-        note.returnNote().substring(0, 20) +
-        "</a></div>"
-    );
-  }
+NoteBuddyView.prototype.noteLinkFormatter = function(note, noteLink) {
+  this.htmlArray.push(
+    "<div id=" +
+      "'noteLink'" +
+      "><a href='#" +
+      noteLink +
+      "'>" +
+      note.returnNote().substring(0, 20) +
+      "</a></div>"
+  );
+};
+
 
 
   exports.NoteBuddyView = NoteBuddyView;

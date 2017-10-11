@@ -1,7 +1,7 @@
 (function(exports) {
   function NoteBuddyView(noteBuddy) {
     this.list = noteBuddy;
-    this.htmlArray = ["<ul>"];
+    this.htmlArray = ["<ul class='note_list'>"];
   }
 
   NoteBuddyView.prototype.toHTML = function() {

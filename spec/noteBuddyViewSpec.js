@@ -6,7 +6,7 @@
     var noteBuddyView = new NoteBuddyView(noteBuddy);
     if (
       noteBuddyView.toHTML() !==
-      "<ul><div id='noteLink'><a href='#This-is-a-note-longe'>This is a note longe</a></div><div id='noteLink'><a href='#Testing,-testing-we-'>Testing, testing we </a></div></ul>"    ) {
+      "<ul><div id='noteLink'><a href='#This-is-a-note-longe$0'>This is a note longe</a></div><div id='noteLink'><a href='#Testing,-testing-we-$1'>Testing, testing we </a></div></ul>"    ) {
       throw new Error("NoteBuddyView has malfunctioned");
     } else {
       console.log("NoteBuddyView.toHTML verified");

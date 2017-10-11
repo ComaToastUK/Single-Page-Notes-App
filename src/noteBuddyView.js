@@ -16,7 +16,7 @@
           .returnNote()
           .substring(0, 20)
           .split(" ")
-          .join("-");
+          .join("-") + "$" + i;
         this.htmlArray.push(
           "<div id=" +
             "'noteLink'" +

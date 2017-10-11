@@ -1,76 +1,26 @@
-
-<style>
-  h1 {
-      text-align:center;
-      margin:30px auto 0 auto;
-      font-size: 40px;
-      font-weight:bold;
-  }
-
-  form {
-    text-align:center;
-    width:360px;
-    border-radius:5px;
-    padding: 30px 20px 20px 20px;
-    margin:20px auto auto auto;
-    display:block;
-    background-color:LightGray;
-  }
-
-  textarea {
-    min-width:320px;
-    min-height:320px;
-  }
-
-  .button {
-    background-color: #4CAF50;
-    border: 2px solid #4CAF50;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-  }
-
-  .button:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid #4CAF50;
-  }
-</style>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Note Buddy</title>
-
+    <link rel="stylesheet" href="public/style.css">
   </head>
 
   <body>
+    <h1>Note Buddy</h1>
+    <img class="buddy" src="public/buddy.png" width="600">
+    <form id="noteForm" action="/" method="GET" enctype="multipart/form-data" >
+      <textarea id ="note" name="note"></textarea>
+      <input id="create_note" class="button" type="submit" value="Create">
+    </form>
 
-  <h1>Note Buddy</h1>
+    <div id="single_note"></div>
+    <div id="note_list"></div>
 
-  <form id="noteForm" action="/" method="GET" enctype="multipart/form-data" >
-    <textarea id ="note" name="note"></textarea>
-    <input id="create_note" class="button" type="submit" value="Create">
-  </form>
-
-  <div id="single_note"></div>
-  <div id="note_list"></div>
-
-
-  <script src="src/note.js"></script>
-  <script src="src/noteBuddy.js"></script>
-  <script src="src/noteBuddyView.js"></script>
-  <script src="createNote.js"></script>
-
-
-
-
+    <script src="src/note.js"></script>
+    <script src="src/noteBuddy.js"></script>
+    <script src="src/noteBuddyView.js"></script>
+    <script src="src/createNote.js"></script>
+    <script src="src/showSingleNote.js"></script>
   </body>
 </html>

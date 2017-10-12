@@ -19,15 +19,19 @@ testSpec.prototype.toEqual = function (a,b) {
 };
 
 testSpec.prototype.expectToEqual = function (object){
-  if ( this.toEqual(object, this.expectation)) {
-    return this._it + " PASSED";
-  } else {
-    return this._it + " FAIL";
-  }
   this._testObject = object
+  if ( this.toEqual(object, this.expectation)) {
+    console.log(this._it + " PASSED");
+  } else {
+    console.log(this._it + " FAIL");
+    console.log("Expected " + this.expectation + " and got " + this._testObject)
+  }
 };
 
-newTest = new testSpec();
-newTest.it('Expects a cheeseburger');
-newTest.expect('cheeseburger');
-newTest.expectToEqual('cheeseburger');
+//
+// How to run tests
+//
+// var newTest = new testSpec();
+// newTest.it('Expects a cheeseburger');
+// newTest.expect('cheeseburger');
+// newTest.expectToEqual('cheeseburger');

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "basic",
   "main": "createNote.js",
-  "dependencies": {},
+  "dependencies": {
+    "file-saver": "^1.3.3"
+  },
   "devDependencies": {
     "http-server": "^0.10.0"
   },

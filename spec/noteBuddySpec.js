@@ -1,25 +1,28 @@
 (function(exports) {
   function noteBuddyChecker() {
-    var noteBuddy = new NoteBuddy();
-
     var mockNote = function() {
       "I am an example note";
     };
 
-    noteBuddy.storeNote(mockNote);
-
-    if (noteBuddy.list.includes(mockNote)) {
-      console.log("Note contained in list");
-    } else {
-      throw new Error("Does not contain note");
+    function test1() {
+      var test = new testSpec();
+      var noteBuddy = new NoteBuddy();
+      test.it("Expects note to be contained in list");
+      noteBuddy.storeNote(mockNote);
+      test.expect(noteBuddy.list.includes(mockNote));
+      test.expectToEqual(true);
     }
+    test1();
 
-    var realNote = noteBuddy.createNote("I'm a brand new note!");
-    if (noteBuddy.list.includes(realNote)) {
-      console.log("Note was created!!");
-    } else {
-      throw new Error("Does not contain note");
+    function test2() {
+      var test = new testSpec();
+      var noteBuddy = new NoteBuddy();
+      var newNote = noteBuddy.createNote("I'm a brand new note!");
+      test.it("Expects a note to be created");
+      test.expect(noteBuddy.list.includes(newNote));
+      test.expectToEqual(true);
     }
+    test2();
   }
 
   noteBuddyChecker();

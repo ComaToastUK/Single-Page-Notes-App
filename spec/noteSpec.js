@@ -1,17 +1,16 @@
 (function(exports) {
   function noteChecker() {
-    var note = new Note("string");
+    var firstTest = new testSpec();
+    var note1 = new Note("string");
+    firstTest.it('Expects note.body to equal "string"');
+    firstTest.expect(note1.body);
+    firstTest.expectToEqual("string");
 
-    if (note.body !== "string") {
-      throw new Error("Note does not match");
-    } else {
-      console.log("Note checker verified");
-    }
-    if (note.returnNote() !== note.body) {
-      throw new Error("returnNote does not match");
-    } else {
-      console.log("returnNote verified");
-    }
+    var secondTest = new testSpec();
+    var note2 = new Note("string2");
+    secondTest.it("expects note2.returnNote() to return note.body");
+    secondTest.expect(note2.returnNote());
+    secondTest.expectToEqual("string2");
   }
 
   noteChecker();

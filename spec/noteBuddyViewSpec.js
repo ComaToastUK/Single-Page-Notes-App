@@ -1,6 +1,6 @@
 (function(exports) {
   function noteBuddyViewChecker() {
-    newTest1 = new testSpec();
+    newTest1 = new PingPongSpec();
     noteBuddy = new NoteBuddy();
     noteBuddyView = new NoteBuddyView(noteBuddy);
 

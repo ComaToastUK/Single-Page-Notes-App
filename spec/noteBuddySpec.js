@@ -5,7 +5,7 @@
     };
 
     function test1() {
-      var test = new testSpec();
+      var test = new PingPongSpec();
       var noteBuddy = new NoteBuddy();
       test.it("Expects note to be contained in list");
       noteBuddy.storeNote(mockNote);
@@ -15,7 +15,7 @@
     test1();
 
     function test2() {
-      var test = new testSpec();
+      var test = new PingPongSpec();
       var noteBuddy = new NoteBuddy();
       var newNote = noteBuddy.createNote("I'm a brand new note!");
       test.it("Expects a note to be created");

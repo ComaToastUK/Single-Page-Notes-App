@@ -16,4 +16,9 @@ function createNote() {
 function displayNoteList() {
   noteBuddyView = new NoteBuddyView(noteBuddy);
   document.getElementById("note_list").innerHTML = noteBuddyView.toHTML();
+  var randomImageNumber = Math.floor(Math.random() * 5);
+  document.getElementById("buddy").innerHTML =
+    "<img src='public/buddy_createnote" +
+    randomImageNumber +
+    ".png' width='600'>";
 }

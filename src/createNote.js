@@ -10,6 +10,7 @@ function createNote() {
       var text = document.getElementById("note").value;
       var exampleNote = noteBuddy.createNote(text);
       displayNoteList();
+        xhttp.open("GET", "/store_note", true);
     });
 }
 

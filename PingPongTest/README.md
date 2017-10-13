@@ -1,4 +1,4 @@
-# PING PONG TEST
+# 🏓 PING PONG TEST 🏓
 
 This is a super-lightweight testing library for unit testing pure javascript models.
 
@@ -10,6 +10,7 @@ This is a super-lightweight testing library for unit testing pure javascript mod
 - Add your test files to the PingPongSpecRunner.html file
 - $ open PingPongSpecRunner.html
 - Check the console in your browser for results
+- Test results will be visible in the console and failed tests will throw error with details
 
 ```
 (function(exports) {
@@ -25,5 +26,8 @@ exampleTest();
 })(this);
 ```
 ### Collaborators
-- James Stubbs
-- Rory Hodgson
+
+- James Stubbs 
+- Rory Hodgson 
+- Mengchen Wang
+- Zoe Hopkins 

@@ -1,9 +1,9 @@
 createNote();
 showSingleNote();
 
-var noteBuddy = new NoteBuddy;
-var buddy = new Buddy;
-var renderer = new Renderer;
+var noteBuddy = new NoteBuddy();
+var buddy = new Buddy();
+var renderer = new Renderer();
 
 function createNote() {
   document

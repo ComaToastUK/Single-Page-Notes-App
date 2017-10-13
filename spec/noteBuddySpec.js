@@ -4,7 +4,7 @@
       "I am an example note";
     };
 
-    function test1() {
+    function testStoreNote() {
       var test = new PingPongSpec();
       var noteBuddy = new NoteBuddy();
       test.it("Expects note to be contained in list");
@@ -12,9 +12,9 @@
       test.expect(noteBuddy.list.includes(mockNote));
       test.expectToEqual(true);
     }
-    test1();
+    testStoreNote();
 
-    function test2() {
+    function testCreateNote() {
       var test = new PingPongSpec();
       var noteBuddy = new NoteBuddy();
       var newNote = noteBuddy.createNote("I'm a brand new note!");
@@ -22,8 +22,19 @@
       test.expect(noteBuddy.list.includes(newNote));
       test.expectToEqual(true);
     }
-    test2();
-  }
+    testCreateNote();
+  
 
+    function testNoteList() {
+      var test = new PingPongSpec();
+      var noteBuddy = new NoteBuddy();
+      var newNote = noteBuddy.createNote("I'm a brand new note!");
+      test.it("Expects an HTML string to be created");
+      console.log(noteBuddy.noteList());
+      test.expect(noteBuddy.noteList());
+      test.expectToEqual("<ul class='note_list'><a href='#$0'>I'm a brand new note</a></ul>");
+    }
+    testNoteList();
+  }
   noteBuddyChecker();
 })(this);

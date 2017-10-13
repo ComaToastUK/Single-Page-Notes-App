@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Note Buddy</title>
-    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <h1>Note Buddy</h1>
     <div id="buddy">
-      <img src="public/buddy.png" width="600">
+      <img src="images/buddy.png" width="600">
     </div>
-    <form id="noteForm" action="/" method="GET" enctype="multipart/form-data" >
+    <form action="/" method="GET" enctype="multipart/form-data" >
       <textarea id ="note" name="note"></textarea>
       <input id="create_note" class="button" type="submit" value="Create">
     </form>
@@ -19,12 +19,10 @@
     <div id="single_note"></div>
     <div id="note_list"></div>
 
-    <script src="bundle.js"></script>
     <script src="src/note.js"></script>
     <script src="src/noteBuddy.js"></script>
-    <script src="src/noteBuddyView.js"></script>
-    <script src="src/createNote.js"></script>
-    <script src="src/showSingleNote.js"></script>
-
+    <script src="src/buddy.js"></script>
+    <script src="src/renderer.js"></script>
+    <script src="src/controller.js"></script>
   </body>
 </html>

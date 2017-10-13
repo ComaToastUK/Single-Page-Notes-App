@@ -28,7 +28,7 @@
   };
 
   NoteBuddy.prototype.singleNote = function (noteIndex) {
-    var note = this.list[noteIndex]
+    var note = this.list[noteIndex];
     return "<div class='single_note'>" + note.returnNote() + "</div>";
   };
 

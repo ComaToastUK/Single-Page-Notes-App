@@ -13,8 +13,23 @@
     return note;
   };
 
-  NoteBuddy.prototype.outputList = function() {
-    return this.list;
+  NoteBuddy.prototype.noteList = function() {
+    var noteListHtml = ["<ul class='note_list'>"];
+    var notes = this.list;
+    notes.forEach(function(note, index) {
+      noteListHtml.push(
+        "<a href='#$" + index + "'>" +
+        note.returnNote().substring(0, 20) +
+        "</a>"
+      );
+    });
+    noteListHtml.push("</ul>");
+    return noteListHtml.join("");
+  };
+
+  NoteBuddy.prototype.singleNote = function (noteIndex) {
+    var note = this.list[noteIndex]
+    return "<div class='single_note'>" + note.returnNote() + "</div>";
   };
 
   exports.NoteBuddy = NoteBuddy;

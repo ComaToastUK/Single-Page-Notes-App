@@ -62,7 +62,7 @@ textarea {
   display:block;
 }
 
-.buddy {
+#buddy {
   float:left;
   margin:auto auto auto 50px;
 }
